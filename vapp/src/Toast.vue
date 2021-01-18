@@ -7,8 +7,9 @@ import Vue from "vue";
 Vue.use(Toasted);
 export default {
   mounted() {
-    const contractEventHandler = ({ contractName, eventName, data }) => {
-      const display = `${contractName}(${eventName}): ${data._message}}`;
+    const contractEventHandler = ({ data }) => {
+      // const display = `${contractName}(${eventName}): ${data._message}}`;
+      const display = `${data._message}}`;
       // const display = `${contractName}(${eventName}): ${data.newValue}, ${data.date}`;
       const subOption = { duration: 3000 };
       this.$toasted.show(display, subOption);
